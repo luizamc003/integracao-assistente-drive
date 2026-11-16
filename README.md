@@ -6,7 +6,7 @@ Projeto roda localmente.
 Tecnologias e principais conceitos:
 RAG · Retrieval-Augmented Generation · Google Drive · n8n · FastAPI · DeepSeek · LLM · embeddings · ChromaDB · banco vetorial · busca semântica · webhook · automação · indexação de documentos · PDF · citação de fontes · Python
 
-###Apresentação
+### Apresentação
 
 <img width="1483" height="937" alt="image" src="https://github.com/user-attachments/assets/5c5560eb-e689-4b21-8cbe-977270e5505c" />
 
