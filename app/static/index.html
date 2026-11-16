@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assistente RAG Drive</title>
+    <style>
+      :root {
+        --cinza-escuro: #4a4a4a;
+        --cinza-claro: #cbcbcb;
+        --creme: #fffee3;
+        --azul: #6d8196;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 760px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        line-height: 1.5;
+        background: var(--creme);
+        color: var(--cinza-escuro);
+      }
+      h1 {
+        font-size: 1.4rem;
+        color: var(--cinza-escuro);
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin-top: 2.5rem;
+        color: var(--cinza-escuro);
+      }
+      textarea,
+      button {
+        font-size: 1rem;
+        font-family: inherit;
+      }
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.6rem;
+        border-radius: 6px;
+        border: 1px solid var(--cinza-claro);
+        background: #fff;
+        color: var(--cinza-escuro);
+      }
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        border: 1px solid var(--azul);
+        background: var(--azul);
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #5c7284;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      #resposta {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 6px;
+        background: #fff;
+        border: 1px solid var(--cinza-claro);
+        white-space: pre-wrap;
+        display: none;
+      }
+      #fontes {
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--cinza-escuro);
+        opacity: 0.8;
+      }
+      ul#arquivos {
+        list-style: none;
+        padding: 0;
+      }
+      ul#arquivos li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid var(--cinza-claro);
+        gap: 1rem;
+      }
+      ul#arquivos li span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .status {
+        font-size: 0.85rem;
+        color: var(--cinza-escuro);
+        opacity: 0.75;
+        margin-top: 0.4rem;
+      }
+      .badge {
+        font-size: 0.75rem;
+        padding: 0.1rem 0.5rem;
+        border-radius: 10px;
+        white-space: nowrap;
+      }
+      .badge.ok {
+        background: var(--azul);
+        color: #fff;
+      }
+      .badge.pendente {
+        background: var(--cinza-claro);
+        color: var(--cinza-escuro);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assistente RAG — Documentos do Drive</h1>
+
+    <section>
+      <textarea
+        id="pergunta"
+        rows="3"
+        placeholder="Faça uma pergunta sobre os documentos indexados..."
+      ></textarea>
+      <div style="margin-top: 0.5rem">
+        <button id="btnPerguntar">Perguntar</button>
+      </div>
+      <div id="resposta"></div>
+      <div id="fontes"></div>
+    </section>
+
+    <h2>Arquivos na pasta do Drive</h2>
+    <button id="btnListar">Atualizar lista</button>
+    <button id="btnSincronizar">Verificar novos arquivos (n8n)</button>
+    <div class="status" id="statusSync"></div>
+    <ul id="arquivos"></ul>
+
+    <script>
+      const el = (id) => document.getElementById(id);
+
+      async function perguntar() {
+        const pergunta = el("pergunta").value.trim();
+        if (!pergunta) return;
+        const btn = el("btnPerguntar");
+        btn.disabled = true;
+        el("resposta").style.display = "block";
+        el("resposta").textContent = "Pensando...";
+        el("fontes").textContent = "";
+        try {
+          const res = await fetch("/perguntar", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ pergunta }),
+          });
+          const data = await res.json();
+          el("resposta").textContent = data.resposta;
+          if (data.fontes && data.fontes.length) {
+            el("fontes").textContent =
+              "Fontes: " +
+              data.fontes
+                .map((f) => `${f.arquivo} (p. ${f.pagina})`)
+                .join("; ");
+          }
+        } catch (e) {
+          el("resposta").textContent = "Erro ao perguntar: " + e;
+        } finally {
+          btn.disabled = false;
+        }
+      }
+
+      async function listarArquivos() {
+        const ul = el("arquivos");
+        ul.innerHTML = "<li>Carregando...</li>";
+        try {
+          const res = await fetch("/drive/arquivos");
+          const data = await res.json();
+          ul.innerHTML = "";
+          for (const arq of data.arquivos) {
+            const li = document.createElement("li");
+            const span = document.createElement("span");
+            span.textContent = arq.name;
+            span.title = arq.name;
+            const badge = document.createElement("span");
+            badge.className = "badge " + (arq.pendente ? "pendente" : "ok");
+            badge.textContent = arq.pendente ? "pendente" : "indexado";
+            const btn = document.createElement("button");
+            btn.textContent = arq.pendente ? "Indexar" : "Reindexar";
+            btn.onclick = () => indexarArquivo(arq.id, btn);
+            li.appendChild(span);
+            li.appendChild(badge);
+            li.appendChild(btn);
+            ul.appendChild(li);
+          }
+        } catch (e) {
+          ul.innerHTML = "<li>Erro ao listar arquivos: " + e + "</li>";
+        }
+      }
+
+      async function indexarArquivo(fileId, btn) {
+        btn.disabled = true;
+        const original = btn.textContent;
+        btn.textContent = "Indexando...";
+        try {
+          const res = await fetch(`/drive/indexar/${fileId}?force=true`, {
+            method: "POST",
+          });
+          const data = await res.json();
+          btn.textContent =
+            data.chunks_criados != null
+              ? `OK (${data.chunks_criados} trechos)`
+              : "Erro";
+        } catch (e) {
+          btn.textContent = "Erro";
+        } finally {
+          setTimeout(() => {
+            listarArquivos();
+          }, 1500);
+        }
+      }
+
+      async function sincronizar() {
+        const status = el("statusSync");
+        status.textContent = "Disparando verificação no n8n (pode levar um tempo)...";
+        try {
+          const res = await fetch("/sincronizar", { method: "POST" });
+          const data = await res.json();
+
+          if (data.status !== "disparado") {
+            status.textContent = "Não foi possível acionar o n8n: " + data.detalhe;
+            return;
+          }
+
+          const itens = Array.isArray(data.resultado) ? data.resultado : [data.resultado];
+          const falhas = itens.filter((i) => i && (i.erro || i.error));
+          const sucesso = itens.length - falhas.length;
+
+          let texto = `Verificação concluída: ${sucesso} ok`;
+          if (falhas.length) {
+            const nomes = falhas.map((f) => f.name || f.file_id || "arquivo desconhecido").join(", ");
+            texto += `, ${falhas.length} falha(s): ${nomes}`;
+          }
+          status.textContent = texto;
+          listarArquivos();
+        } catch (e) {
+          status.textContent = "Erro: " + e;
+        }
+      }
+
+      el("btnPerguntar").addEventListener("click", perguntar);
+      el("btnListar").addEventListener("click", listarArquivos);
+      el("btnSincronizar").addEventListener("click", sincronizar);
+
+      listarArquivos();
+    </script>
+  </body>
+</html>

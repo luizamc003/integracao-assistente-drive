@@ -1,0 +1,102 @@
+[
+  {
+    "pergunta": "Quem são os autores do artigo sobre quando a aprendizagem adaptativa é eficaz (When adaptive learning is effective learning)?",
+    "documento_esperado": "When adaptive learning is effective learning.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Em qual universidade trabalham os autores do artigo sobre implementação de um sistema de tutoria inteligente usando Moodle?",
+    "documento_esperado": "Implementation of an Intelligent Tutoring System.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Qual departamento da King Saud University é responsável pelo artigo sobre swarm intelligence para o problema de sequenciamento curricular?",
+    "documento_esperado": "Swarm intelligence to solve the curriculum sequencing proble",
+    "respondivel": true
+  },
+  {
+    "pergunta": "O que é otimização por colônia de formigas (Ant Colony Optimization) segundo o artigo sobre sistemas de aconselhamento?",
+    "documento_esperado": "An Ant Colony Optimization based Advice.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Em quantos artigos revisados o Moodle foi usado para desenvolvimento curricular, segundo a revisão sistemática?",
+    "documento_esperado": "A systematic review on trends in using Moodle for teaching and learning.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Qual é o código secreto do projeto mencionado no documento de teste?",
+    "documento_esperado": "teste_v1.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "O que o artigo sobre Moodle como plugin de aprendizagem adaptativa no Marrocos (Case of Morocco) conclui sobre a eficácia da aprendizagem?",
+    "documento_esperado": "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Quais são os estágios de implementação da aprendizagem adaptativa usando o Moodle LMS, segundo o artigo correspondente?",
+    "documento_esperado": "Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Como funciona a recomendação de trilha de aprendizagem baseada em algoritmo genético de comprimento variável modificado?",
+    "documento_esperado": "Learning path recommendation based on modified\nvariable length genetic algorithm.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "O que o artigo sobre integração de tecnologia (Integration of the technology) discute?",
+    "documento_esperado": "Integration of the technology.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Qual problema de otimização é abordado no artigo publicado no SocProS 2011 (K. Deep et al.)?",
+    "documento_esperado": "K. Deep et al. (Eds.)_ Proceedings of the International Conference on SocProS 2011, AISC 131, pp. 579–590..pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "O que a abordagem metaheurística para sequenciamento curricular adaptativo (Metaheuristic-based Adaptive Curriculum Sequencing) propõe de diferente das abordagens anteriores?",
+    "documento_esperado": "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "O sistema de tutoria inteligente mencionado usa Moodle como plataforma de que forma?",
+    "documento_esperado": "Implementation of an Intelligent Tutoring System.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Quais universidades ou instituições participaram do estudo sobre aprendizagem adaptativa eficaz (When adaptive learning is effective learning)?",
+    "documento_esperado": "When adaptive learning is effective learning.pdf",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Qual é a definição de sequenciamento curricular (curriculum sequencing) segundo os artigos sobre swarm intelligence?",
+    "documento_esperado": "Swarm intelligence to solve the curriculum sequencing proble",
+    "respondivel": true
+  },
+  {
+    "pergunta": "Qual é a capital da França?",
+    "documento_esperado": null,
+    "respondivel": false
+  },
+  {
+    "pergunta": "Qual é a receita tradicional de um bolo de chocolate?",
+    "documento_esperado": null,
+    "respondivel": false
+  },
+  {
+    "pergunta": "Quem ganhou a Copa do Mundo de futebol em 2022?",
+    "documento_esperado": null,
+    "respondivel": false
+  },
+  {
+    "pergunta": "Qual é a previsão do tempo para amanhã em São Paulo?",
+    "documento_esperado": null,
+    "respondivel": false
+  },
+  {
+    "pergunta": "Como configurar um servidor Kubernetes do zero?",
+    "documento_esperado": null,
+    "respondivel": false
+  }
+]

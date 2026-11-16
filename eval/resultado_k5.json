@@ -1,0 +1,274 @@
+{
+  "k": 5,
+  "recall_rate": 0.8,
+  "recusa_indevida_em_respondiveis": 8,
+  "recusa_correta_rate_em_nao_respondiveis": 1.0,
+  "tempo_medio_segundos": 1.45,
+  "detalhes": [
+    {
+      "pergunta": "Quem são os autores do artigo sobre quando a aprendizagem adaptativa é eficaz (When adaptive learning is effective learning)?",
+      "respondivel": true,
+      "documento_esperado": "When adaptive learning is effective learning.pdf",
+      "documentos_recuperados": [
+        "A systematic review on trends in using Moodle for teaching and learning.pdf",
+        "Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf",
+        "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf",
+        "When adaptive learning is effective learning.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": false,
+      "resposta": "Os autores do artigo são Shuai Wang, Claire Christensena, Wei Cuib, Richard Tongb, Louise Yarnalla, Linda Sheara e Mingyu Fengc (When adaptive learning is effective learning.pdf, página 2).",
+      "tempo_segundos": 1.12
+    },
+    {
+      "pergunta": "Em qual universidade trabalham os autores do artigo sobre implementação de um sistema de tutoria inteligente usando Moodle?",
+      "respondivel": true,
+      "documento_esperado": "Implementation of an Intelligent Tutoring System.pdf",
+      "documentos_recuperados": [
+        "A systematic review on trends in using Moodle for teaching and learning.pdf",
+        "Implementation of an Intelligent Tutoring System.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos. Os trechos fornecem informações sobre a implementação de um Sistema de Tutoria Inteligente usando Moodle, mas não mencionam a universidade dos autores (Implementation of an Intelligent Tutoring System.pdf, página 3).",
+      "tempo_segundos": 1.23
+    },
+    {
+      "pergunta": "Qual departamento da King Saud University é responsável pelo artigo sobre swarm intelligence para o problema de sequenciamento curricular?",
+      "respondivel": true,
+      "documento_esperado": "Swarm intelligence to solve the curriculum sequencing proble",
+      "documentos_recuperados": [
+        "Learning path recommendation based on modified\nvariable length genetic algorithm.pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "Swarm intelligence to solve the curriculum sequencing problem.pdf"
+      ],
+      "recall_ok": false,
+      "recusou": false,
+      "resposta": "O Departamento de Ciência da Computação (Department of Computer Science) da Faculdade de Ciências da Computação e da Informação (College of Computer and Information Sciences) da King Saud University é o responsável pelo artigo (Swarm intelligence to solve the curriculum sequencing problem.pdf, página 1).",
+      "tempo_segundos": 1.43
+    },
+    {
+      "pergunta": "O que é otimização por colônia de formigas (Ant Colony Optimization) segundo o artigo sobre sistemas de aconselhamento?",
+      "respondivel": true,
+      "documento_esperado": "An Ant Colony Optimization based Advice.pdf",
+      "documentos_recuperados": [
+        "An Ant Colony Optimization based Advice.pdf",
+        "K. Deep et al. (Eds.)_ Proceedings of the International Conference on SocProS 2011, AISC 131, pp. 579–590..pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "Swarm intelligence to solve the curriculum sequencing problem.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": true,
+      "resposta": "Não encontrei nos trechos informação suficiente para responder o que é otimização por colônia de formigas segundo o artigo sobre sistemas de aconselhamento. Os trechos disponíveis definem ACO em outros documentos (por exemplo, \"Ant Colony Optimization (ACO) is a metaheuristic for solving combinatorial optimization problems\" em Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf, página 14), mas nenhum trecho do artigo sobre sistemas de aconselhamento (\"An Ant Colony Optimization based Advice.pdf\") apresenta uma definição do que é ACO — a página 7 desse arquivo trata apenas do procedimento de construção de soluções e da estrutura de dados.",
+      "tempo_segundos": 1.82
+    },
+    {
+      "pergunta": "Em quantos artigos revisados o Moodle foi usado para desenvolvimento curricular, segundo a revisão sistemática?",
+      "respondivel": true,
+      "documento_esperado": "A systematic review on trends in using Moodle for teaching and learning.pdf",
+      "documentos_recuperados": [
+        "A systematic review on trends in using Moodle for teaching and learning.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos. Os trechos fornecem a porcentagem de artigos relacionados ao tema \"Curriculum development\" (45% para \"Course design\", 4% para \"Design framework\" e 4% para \"Teachers' perspectives\"), mas não informam o número absoluto de artigos revisados nem quantos artigos usaram o Moodle especificamente para desenvolvimento curricular (A systematic review on trends in using Moodle for teaching and learning.pdf, página 10).",
+      "tempo_segundos": 1.87
+    },
+    {
+      "pergunta": "Qual é o código secreto do projeto mencionado no documento de teste?",
+      "respondivel": true,
+      "documento_esperado": "teste_v1.pdf",
+      "documentos_recuperados": [
+        "A systematic review on trends in using Moodle for teaching and learning.pdf",
+        "Lista03-7.pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "teste_v1.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": false,
+      "resposta": "O código secreto do projeto é XYZ789 (teste_v1.pdf, página 1).",
+      "tempo_segundos": 1.13
+    },
+    {
+      "pergunta": "O que o artigo sobre Moodle como plugin de aprendizagem adaptativa no Marrocos (Case of Morocco) conclui sobre a eficácia da aprendizagem?",
+      "respondivel": true,
+      "documento_esperado": "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf",
+      "documentos_recuperados": [
+        "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": true,
+      "resposta": "Não encontrei nos documentos uma conclusão que avalie diretamente a eficácia da aprendizagem (por exemplo, resultados de desempenho acadêmico comparando os grupos). Os trechos trazem conclusões sobre motivação e engajamento, mas não sobre eficácia de aprendizagem em si.\n\nO que os trechos permitem afirmar:\n- Em termos de motivação, a abordagem de aprendizagem adaptativa baseada em IA teve impacto positivo: 60,8% da amostra afirmou estar motivada, contra 11,8% completamente desmotivados e 27,5% apenas moderadamente motivados (The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf, página 13).\n- 84,3% dos estudantes apoiaram o plug-in de aprendizagem adaptativa baseada em IA “Personalized Study Guide” e disseram que gostariam de repetir a experiência em outras disciplinas (The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf, página 13; página 11).\n- O artigo afirma que os achados são consistentes com outros estudos que destacaram vantagens de sistemas de aprendizagem adaptativa baseados em IA na melhoria de motivação, desempenho e engajamento, e que os resultados apoiam a ideia de que percursos individualizados podem melhorar o desempenho educacional (The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf, página 13).\n- O estudo reconhece limitações: foi realizado em uma escola secundária específica e em uma área disciplinar específica, o que pode dificultar a generalização das conclusões para contextos educacionais mais amplos; além disso, a avaliação foi majoritariamente baseada em métricas quantitativas (The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf, página 13).\n- A conclusão do trecho afirma que o método fomenta o engajamento dos alunos ao instilar motivação intrínseca, incentivando participação ativa nas aulas e aplicação autônoma da informação para progredir (The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf, página 13).\n\nPortanto, com base apenas nos trechos fornecidos, não há uma conclusão explícita sobre a eficácia da aprendizagem; há conclusões sobre motivação, engajamento e aceitação do plug-in.",
+      "tempo_segundos": 3.58
+    },
+    {
+      "pergunta": "Quais são os estágios de implementação da aprendizagem adaptativa usando o Moodle LMS, segundo o artigo correspondente?",
+      "respondivel": true,
+      "documento_esperado": "Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf",
+      "documentos_recuperados": [
+        "A systematic review on trends in using Moodle for teaching and learning.pdf",
+        "Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf",
+        "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": false,
+      "resposta": "Os estágios de implementação da aprendizagem adaptativa são: estágio inicial, estágio de pré-teste, estágio de geração de caminho, estágio de aprendizagem e estágio de pós-teste (Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf, página 10).",
+      "tempo_segundos": 1.64
+    },
+    {
+      "pergunta": "Como funciona a recomendação de trilha de aprendizagem baseada em algoritmo genético de comprimento variável modificado?",
+      "respondivel": true,
+      "documento_esperado": "Learning path recommendation based on modified\nvariable length genetic algorithm.pdf",
+      "documentos_recuperados": [
+        "Learning path recommendation based on modified\nvariable length genetic algorithm.pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": false,
+      "resposta": "A recomendação de trilha de aprendizagem baseada em algoritmo genético de comprimento variável modificado funciona da seguinte forma:\n\n- Quando um novo curso é lançado (problema de cold start em sistemas de recomendação), o sistema proposto só pode recomendar uma sequência de trilha de aprendizagem predefinida a um aprendiz ativo, com base no conselho do gerador do curso ou em regras prescritivas embutidas; no entanto, não é obrigatório que o aprendiz siga as recomendações fornecidas (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 9).\n\n- Após completar o curso, as trilhas de aprendizagem e o desempenho do aprendiz naquele curso são armazenados e analisados; depois de algum tempo, mais e mais aprendizes entram no sistema para completar esse curso e teriam se formado nele, e o framework proposto entra em cena com base no número de alumni que previamente completaram esse curso (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 9).\n\n- Quando há um número suficiente de alumni disponível, o sistema proposto seleciona um conjunto de alumni similares após calcular a similaridade entre o aprendiz ativo e os alumni; esses aprendizes (ativos e alumni) são caracterizados por seus diferentes estilos de aprendizagem, níveis de conhecimento e recursos experientes (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 9).\n\n- O perfil do aprendiz consiste nas avaliações do aprendiz sobre recursos experientes, seus estilos de aprendizagem gerados por meio do questionário Index of Learning Style (ILS) e suas notas em várias disciplinas daquele curso em uma escala de 5 pontos; primeiro, calcula-se o nível de conhecimento de um aprendiz com base nas notas de várias disciplinas (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 9).\n\n- No sistema, a similaridade tem três componentes principais: similaridade baseada em estilo de aprendizagem (Sim_LS), conhecimento... (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 9).\n\n- O sistema LPRS_EL apresenta um framework de recomendação colaborativa para gerar recomendações de trilha de aprendizagem para e-learners por meio de um algoritmo genético de comprimento variável (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 8).\n\n- O sistema fornece uma sequência de trilha de aprendizagem predefinida a um aprendiz ativo no estágio inicial de lançamento de um novo curso com a ajuda do conselho do gerador do curso e atualiza iterativamente a trilha de aprendizagem previamente recomendada por meio das sequências de trilha de aprendizagem dos alumni usando VLGA até que a condição de terminação seja satisfeita (Learning path recommendation based on modified variable length genetic algorithm.pdf, página 8).",
+      "tempo_segundos": 3.86
+    },
+    {
+      "pergunta": "O que o artigo sobre integração de tecnologia (Integration of the technology) discute?",
+      "respondivel": true,
+      "documento_esperado": "Integration of the technology.pdf",
+      "documentos_recuperados": [
+        "An Ant Colony Optimization based Advice.pdf",
+        "Integration of the technology.pdf",
+        "Learning path recommendation based on modified\nvariable length genetic algorithm.pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": false,
+      "resposta": "O artigo sobre integração de tecnologia discute o desenvolvimento tecnológico e a popularização da Internet, que ampliaram o uso das Tecnologias de Informação e Comunicação (TICs). Na educação, as TICs inauguraram uma nova era de aprendizagem eletrônica (e-learning), proporcionando aos estudantes acesso a experiências de aprendizagem mais diversificadas sem as limitações de tempo, espaço e lugar (Integration of the technology.pdf, página 2). O e-learning refere-se a todos os tipos de aprendizagem apoiados pela web e, no contexto internacional, foi adotado com sucesso no ensino superior para expandir o setor educacional (Integration of the technology.pdf, página 2). Essa modalidade apresenta-se como uma forma flexível e personalizada de aprendizagem, permitindo aprendizagem sob demanda e reduzindo o custo de aprendizagem (Integration of the technology.pdf, página 2). O e-learning baseia-se no uso de Ambientes Virtuais de Aprendizagem (VLE), também conhecidos como Sistemas de Gestão de Aprendizagem (LMS), utilizando recursos da Internet para comunicação e distribuição de conteúdo, frequentemente usados como extensão da sala de aula no espaço virtual da Internet (Integration of the technology.pdf, página 2).",
+      "tempo_segundos": 2.39
+    },
+    {
+      "pergunta": "Qual problema de otimização é abordado no artigo publicado no SocProS 2011 (K. Deep et al.)?",
+      "respondivel": true,
+      "documento_esperado": "K. Deep et al. (Eds.)_ Proceedings of the International Conference on SocProS 2011, AISC 131, pp. 579–590..pdf",
+      "documentos_recuperados": [
+        "Integration of the technology.pdf",
+        "Lista03-7.pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf"
+      ],
+      "recall_ok": false,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos.",
+      "tempo_segundos": 0.92
+    },
+    {
+      "pergunta": "O que a abordagem metaheurística para sequenciamento curricular adaptativo (Metaheuristic-based Adaptive Curriculum Sequencing) propõe de diferente das abordagens anteriores?",
+      "respondivel": true,
+      "documento_esperado": "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+      "documentos_recuperados": [
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos. Os trechos fornecidos não apresentam uma comparação entre a abordagem metaheurística para sequenciamento curricular adaptativo e abordagens anteriores, nem descrevem o que ela propõe de diferente.",
+      "tempo_segundos": 1.24
+    },
+    {
+      "pergunta": "O sistema de tutoria inteligente mencionado usa Moodle como plataforma de que forma?",
+      "respondivel": true,
+      "documento_esperado": "Implementation of an Intelligent Tutoring System.pdf",
+      "documentos_recuperados": [
+        "A systematic review on trends in using Moodle for teaching and learning.pdf",
+        "Implementation of an Intelligent Tutoring System.pdf",
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": false,
+      "resposta": "O sistema de tutoria inteligente é implementado usando a pilha LAMP, com o front end usando PHP, back end usando MySQL e o servidor web Apache (Implementation of an Intelligent Tutoring System.pdf, página 3). O Moodle é um Sistema de Código Aberto que permite um alto nível de extensibilidade em todos os níveis (Implementation of an Intelligent Tutoring System.pdf, página 3). Os módulos Expert, Tutoring e Student são implementados usando Moodle (Implementation of an Intelligent Tutoring System.pdf, página 3). No framework do Sistema de Tutoria Inteligente, o Módulo Expert consiste na representação das competências, atividades instrucionais e avaliações e seu alinhamento, e cada um desses elementos é representado no Moodle (Implementation of an Intelligent Tutoring System.pdf, página 3). As competências são incorporadas por meio do módulo \"Outcomes\" do Moodle (Implementation of an Intelligent Tutoring System.pdf, página 3). As atividades instrucionais podem ser de vários tipos, incluindo Webpages, Files, Books, IMS content packages, Labels, Pages e URLs (Implementation of an Intelligent Tutoring System.pdf, página 3). As avaliações são representadas usando os tipos de questões passíveis de avaliação automática disponíveis no Question Bank (Implementation of an Intelligent Tutoring System.pdf, página 3).",
+      "tempo_segundos": 2.25
+    },
+    {
+      "pergunta": "Quais universidades ou instituições participaram do estudo sobre aprendizagem adaptativa eficaz (When adaptive learning is effective learning)?",
+      "respondivel": true,
+      "documento_esperado": "When adaptive learning is effective learning.pdf",
+      "documentos_recuperados": [
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "Stages of Adaptive Learning Implementation by Means of Moodle LMS.pdf",
+        "The Impact of Implementing a Moodle Plug-in as an AI-based Adaptive Learning Solution on Learning Effectiveness: Case of Morocco.pdf",
+        "When adaptive learning is effective learning.pdf"
+      ],
+      "recall_ok": true,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos. Os trechos fornecem apenas as afiliações dos autores (SRI International, Squirrel AI Learning by Yixue Education Group e WestEd) (When adaptive learning is effective learning.pdf, página 2), mas não informam quais universidades ou instituições participaram do estudo.",
+      "tempo_segundos": 1.26
+    },
+    {
+      "pergunta": "Qual é a definição de sequenciamento curricular (curriculum sequencing) segundo os artigos sobre swarm intelligence?",
+      "respondivel": true,
+      "documento_esperado": "Swarm intelligence to solve the curriculum sequencing proble",
+      "documentos_recuperados": [
+        "Metaheuristic-based Adaptive Curriculum Sequencingapproaches-atualizado.pdf",
+        "Swarm intelligence to solve the curriculum sequencing problem.pdf"
+      ],
+      "recall_ok": false,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos.",
+      "tempo_segundos": 1.16
+    },
+    {
+      "pergunta": "Qual é a capital da França?",
+      "respondivel": false,
+      "documento_esperado": null,
+      "documentos_recuperados": [],
+      "recall_ok": null,
+      "recusou": true,
+      "resposta": "Não encontrei essa informação nos documentos.",
+      "tempo_segundos": 0.04
+    },
+    {
+      "pergunta": "Qual é a receita tradicional de um bolo de chocolate?",
+      "respondivel": false,
+      "documento_esperado": null,
+      "documentos_recuperados": [],
+      "recall_ok": null,
+      "recusou": true,
+      "resposta": "Não encontrei essa informação nos documentos.",
+      "tempo_segundos": 0.03
+    },
+    {
+      "pergunta": "Quem ganhou a Copa do Mundo de futebol em 2022?",
+      "respondivel": false,
+      "documento_esperado": null,
+      "documentos_recuperados": [
+        "Integration of the technology.pdf"
+      ],
+      "recall_ok": null,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos.",
+      "tempo_segundos": 0.79
+    },
+    {
+      "pergunta": "Qual é a previsão do tempo para amanhã em São Paulo?",
+      "respondivel": false,
+      "documento_esperado": null,
+      "documentos_recuperados": [],
+      "recall_ok": null,
+      "recusou": true,
+      "resposta": "Não encontrei essa informação nos documentos.",
+      "tempo_segundos": 0.04
+    },
+    {
+      "pergunta": "Como configurar um servidor Kubernetes do zero?",
+      "respondivel": false,
+      "documento_esperado": null,
+      "documentos_recuperados": [
+        "An Ant Colony Optimization based Advice.pdf",
+        "Implementation of an Intelligent Tutoring System.pdf",
+        "Lista03-7.pdf",
+        "Swarm intelligence to solve the curriculum sequencing problem.pdf"
+      ],
+      "recall_ok": null,
+      "recusou": true,
+      "resposta": "Não encontrei a resposta nos documentos.",
+      "tempo_segundos": 1.21
+    }
+  ]
+}
