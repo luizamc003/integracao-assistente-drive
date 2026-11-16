@@ -1,6 +1,15 @@
 # Assistente RAG com Google Drive, n8n e FastAPI
 
 Sistema de perguntas e respostas sobre documentos PDF armazenados no Google Drive. A indexação é disparada pelo n8n sempre que a pasta do Drive muda; as perguntas são respondidas com base apenas nos trechos recuperados, sempre citando a fonte (arquivo e página).
+Projeto roda localmente. 
+
+Tecnologias e principais conceitos:
+RAG · Retrieval-Augmented Generation · Google Drive · n8n · FastAPI · DeepSeek · LLM · embeddings · ChromaDB · banco vetorial · busca semântica · webhook · automação · indexação de documentos · PDF · citação de fontes · Python
+
+###Apresentação
+
+<img width="1483" height="937" alt="image" src="https://github.com/user-attachments/assets/5c5560eb-e689-4b21-8cbe-977270e5505c" />
+
 
 ## Arquitetura
 
@@ -100,6 +109,9 @@ Fluxo: **Webhook → Google Drive (Search, pasta por ID, filtro mimeType=applica
 - Ative **"Continue On Fail"** no nó HTTP Request para que a falha de 1 arquivo não interrompa o processamento dos demais.
 - O endpoint `/drive/indexar/{id}` já verifica a versão (`modifiedTime`) e pula arquivos sem mudança — não é necessário filtrar isso no n8n.
 - Ative o workflow ("Active") para usar a Production URL do webhook.
+
+<img width="852" height="261" alt="image" src="https://github.com/user-attachments/assets/77e8a242-cd43-409f-9228-51190d68a89b" />
+
 
 ## Executando
 
