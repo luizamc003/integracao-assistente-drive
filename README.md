@@ -160,8 +160,3 @@ Resultado obtido com 20 perguntas (16 respondíveis sobre 13 documentos, 4 fora 
 - A recusa de perguntas fora do domínio foi 100% correta em ambas as configurações, sem nenhuma chamada ao LLM nesses casos (filtro por distância de similaridade).
 - Custo por pergunta não foi medido diretamente neste script (não há tracking de tokens da resposta do DeepSeek); é um próximo passo natural.
 
-## Próximos passos
-
-- Adicionar tracking de tokens/custo por chamada ao DeepSeek.
-- Rotina de limpeza de arquivos removidos do Drive (comparar IDs indexados com os atualmente presentes na pasta).
-- Agregar os resultados de todos os arquivos processados pelo n8n numa única resposta do webhook (hoje o modo "When Last Node Finishes" retorna só o resultado do último item processado).
